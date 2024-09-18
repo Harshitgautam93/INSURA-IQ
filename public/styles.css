@@ -1,0 +1,152 @@
+/* Global styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Remove horizontal scroll */
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(1, 121, 111, 0.6); /* Pine green with transparency */
+  padding: 5px 10px; /* Reduced padding to decrease overall spacing */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+/* Logo styles */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Takes up space on the left */
+}
+
+.navbar-logo img {
+  height: 30px; /* Adjust size as needed */
+}
+
+/* Centered links styles */
+.navbar-center {
+  display: flex;
+  gap: 10px; /* Reduced gap between links */
+  flex: 2; /* Takes up the middle space */
+  justify-content: center;
+}
+
+.navbar-center a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px; /* Adjusted padding to fit the smaller button */
+}
+
+.navbar-center a:hover {
+  background-color: rgba(255, 215, 0, 0.8); /* Slightly more opaque pine green on hover */
+}
+
+.navbar-button {
+  color: rgba(1, 121, 111, 0.8);
+  text-decoration: none;
+  padding: 8px 15px; /* Adjust padding to your preference */
+  background-color: rgba(255, 215, 0, 1); /* Pine green */
+  border-radius: 5px; /* Rounded corners for buttons */
+  font-size: 0.9rem; /* Adjust font size if necessary */
+  min-width: 40px; /* Set minimum width if needed */
+  text-align: center; /* Center text inside the button */
+  padding-left: 100px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar-button:hover {
+  background-color: rgba(1, 121, 111, 1); /* Darker green on hover */
+}
+
+/* Layout wrapper to ensure footer is pushed to the bottom */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Landing page styles */
+.landing-page {
+  background: #4CAF50; /* Example background color for landing page */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Section styles */
+.section {
+  padding: 40px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  width: 100%; /* Full viewport width */
+  height: 150vh; /* Adjust height as needed */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add shadow for better visibility */
+  display: flex; /* Center content */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure sections have a minimum width of 100% */
+.section, .landing-page {
+  width: 100%; /* Ensure no horizontal scrolling */
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%; /* Full width of the viewport */
+  height: 50vh; /* Adjust height as needed */
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1); /* Optional: Add shadow for separation */
+  margin-top: auto; /* Push the footer to the bottom */
+  position: relative;
+}
+
+/* Ensure no horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+}
+/* src/Preloader.css */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black; /* Background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  z-index: 9999;
+}
+
+.preloader-name {
+  font-size: 4rem;
+  color: #ffffff; /* White text color */
+  font-family: Space Mono;
+  display: flex;
+  gap: 1rem;
+}
+
+.preloader-part {
+  opacity: 0; /* Start invisible */
+  display: inline-block; /* Allows scaling effect */
+}
+
